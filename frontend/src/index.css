@@ -1,0 +1,239 @@
+/* --- Importación de Fuentes de Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:wght@400;700&display=swap');
+
+/* --- Variables de Color (Tema "Biblioteca") --- */
+:root {
+    --color-fondo-papel: #fdfaf6; /* Un blanco cálido, como papel de libro */
+    --color-fondo-tarjeta: #fffefc; /* Un blanco casi puro pero cálido para las tarjetas */
+    --color-texto-principal: #3a2e28; /* Un marrón muy oscuro, en lugar de negro puro */
+    --color-texto-secundario: #6a4a3a; /* Un marrón más suave para autores y descripciones */
+    --color-borde-sutil: #d3c9b6; /* Un beige/marrón claro para bordes */
+    --color-primario-accion: #4b664c; /* Un verde bosque oscuro (como lámpara de banquero) */
+    --color-secundario-accion: #9a3b3b; /* Un burdeos/rojo oscuro (como lomo de libro) */
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Noto Sans', sans-serif; /* Fuente limpia para el cuerpo del texto */
+    margin: 0;
+    background-color: var(--color-fondo-papel);
+    color: var(--color-texto-principal);
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Encabezado --- */
+.header {
+    background-color: var(--color-fondo-tarjeta);
+    padding: 25px 30px;
+    border-radius: 3px;
+    border: 1px solid var(--color-borde-sutil);
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(89, 64, 31, 0.1); /* Sombra muy sutil y cálida */
+}
+
+.header h1 {
+    font-family: 'Lora', serif; /* Fuente con serifa para el título */
+    margin: 0;
+    color: var(--color-secundario-accion); /* Color burdeos */
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.header p {
+    margin: 5px 0 0;
+    color: var(--color-texto-secundario);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* --- Contenido Principal (Tienda) --- */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Para mejor responsividad */
+    gap: 25px;
+}
+
+/* --- Lista de Libros (columna izquierda) --- */
+.book-list {
+    flex: 2;
+    min-width: 300px; /* Ancho mínimo */
+    background-color: var(--color-fondo-tarjeta);
+    padding: 10px 25px 25px 25px;
+    border-radius: 3px;
+    border: 1px solid var(--color-borde-sutil);
+    box-shadow: 0 1px 3px rgba(89, 64, 31, 0.08);
+}
+
+.book-list h2 {
+    font-family: 'Lora', serif;
+    border-bottom: 2px solid var(--color-borde-sutil);
+    padding-bottom: 10px;
+    color: var(--color-texto-principal);
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed var(--color-borde-sutil);
+    padding: 20px 5px;
+}
+.book-item:last-child {
+    border-bottom: none;
+}
+
+.book-details h4 {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    margin: 0 0 5px 0;
+    color: var(--color-texto-principal);
+}
+.book-author {
+    font-style: italic;
+    color: var(--color-texto-secundario);
+    margin: 0 0 8px 0;
+}
+.book-price {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--color-texto-principal);
+}
+
+/* --- Carrito (columna derecha) --- */
+.cart {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--color-fondo-tarjeta);
+    padding: 25px;
+    border-radius: 3px;
+    border: 1px solid var(--color-borde-sutil);
+    box-shadow: 0 1px 3px rgba(89, 64, 31, 0.08);
+    height: fit-content; /* Se ajusta al contenido */
+}
+
+.cart h2 {
+    font-family: 'Lora', serif;
+    margin-top: 0;
+    border-bottom: 2px solid var(--color-borde-sutil);
+    padding-bottom: 10px;
+}
+
+.cart-item, .cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-texto-principal);
+}
+.cart hr {
+    border: 0;
+    border-top: 1px solid var(--color-borde-sutil);
+    margin: 20px 0;
+}
+
+/* --- Botones --- */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 0.5px;
+}
+button:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.add-to-cart-btn {
+    background-color: var(--color-primario-accion); /* Verde oscuro */
+    color: white;
+}
+.add-to-cart-btn:hover:not(:disabled) {
+    background-color: #3b523c; /* Verde más oscuro */
+    transform: translateY(-1px);
+}
+
+.checkout-btn, .confirm-btn, .back-btn {
+    background-color: var(--color-secundario-accion); /* Burdeos */
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+.checkout-btn:hover:not(:disabled), .confirm-btn:hover, .back-btn:hover {
+    background-color: #7c2f2f; /* Burdeos más oscuro */
+    transform: translateY(-1px);
+}
+
+/* --- Formulario de Compra y Confirmación --- */
+.checkout-form, .confirmation {
+    background-color: var(--color-fondo-tarjeta);
+    padding: 30px;
+    border-radius: 3px;
+    border: 1px solid var(--color-borde-sutil);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario */
+    box-shadow: 0 1px 3px rgba(89, 64, 31, 0.08);
+}
+
+.checkout-form h2, .confirmation h2 {
+    font-family: 'Lora', serif;
+    margin-top: 0;
+    color: var(--color-texto-principal);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--color-texto-secundario);
+}
+.form-group input {
+    width: calc(100% - 20px); /* Ajuste para el padding */
+    padding: 12px 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    background-color: var(--color-fondo-papel);
+    border: 1px solid var(--color-borde-sutil);
+    border-radius: 3px;
+    color: var(--color-texto-principal);
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-texto-principal);
+    box-shadow: 0 0 5px rgba(89, 64, 31, 0.1);
+}
+
+.order-summary {
+    list-style-type: none;
+    padding: 15px 20px;
+    background-color: var(--color-fondo-papel);
+    border: 1px solid var(--color-borde-sutil);
+    border-radius: 3px;
+}
+.order-summary li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--color-borde-sutil);
+}
+.order-summary li:last-child {
+    border-bottom: none;
+}

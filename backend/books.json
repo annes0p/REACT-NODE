@@ -1,0 +1,44 @@
+[
+    {
+        "id": "principito",
+        "title": "El Principito",
+        "author": "Antoine de Saint-Exupéry",
+        "price": 15,
+        "stock": 20
+    },
+    {
+        "id": "1984",
+        "title": "1984",
+        "author": "George Orwell",
+        "price": 20,
+        "stock": 10
+    },
+    {
+        "id": "duna",
+        "title": "Duna",
+        "author": "Frank Herbert",
+        "price": 25,
+        "stock": 5
+    },
+    {
+        "id": "cienaniosdesoledad",
+        "title": "Cien Años de Soledad",
+        "author": "Gabriel García Márquez",
+        "price": 18,
+        "stock": 8
+    },
+    {
+        "id": "orgulloyprejuicio",
+        "title": "Orgullo y Prejuicio",
+        "author": "Jane Austen",
+        "price": 12,
+        "stock": 15
+    },
+    {
+        "id": "harrypotter1",
+        "title": "Harry Potter y la Piedra Filosofal",
+        "author": "J.K. Rowling",
+        "price": 22,
+        "stock": 30
+    }
+]

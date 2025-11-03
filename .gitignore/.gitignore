@@ -1,0 +1,14 @@
+# Ignorar todas las carpetas node_modules 
+**/node_modules 
+
+# Ignorar carpetas de build 
+**/dist
+.vite/
+
+# Logs
+npm-debug.log*
+
+# Archivos de entorno
+.env
+.env.local
+*.env
